@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 34
+
+//    signingConfigs {
+//        release {
+//            keyAlias 'pocra_training_prod'
+//            storeFile file('D:\\Amruta\\JKS files\\pocra_training.jks')
+//            storePassword 'vinod@25042019'
+//            keyPassword 'vinod@25042019'
+//        }
+//    }
+    defaultConfig {
+        applicationId "in.gov.pocra.training"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 21   // for PS-HRD  Change By Mayuri 22 Nov
+        versionName '2.2.5'  // for PS-HRD Change By Mayuri 22 Nov
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            multiDexEnabled true
+
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'          //
+           // signingConfig signingConfigs.release
+        }
+
+        debug {
+            shrinkResources true
+            minifyEnabled true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    namespace 'in.gov.pocra.training'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    // fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':app:libs:appinventorapi')
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-config:20.0.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation(name: 'appinventorui-release_v1.0', ext: 'aar')
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    // implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.prolificinteractive:material-calendarview:1.4.2'
+    // implementation 'com.github.vinod1988:AppSettings:1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+    // Fo month picker
+//    implementation 'com.whiteelephant:monthandyearpicker:1.3.0'
+//    implementation 'com.bitly:bitlysdk:1.0.2'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021. Runtime Solutions Pvt Ltd. All right reserved.
+  ~ Web URL  http://runtime-solutions.com
+  ~ Author Name: Vinod Vishwakarma
+  ~ Linked In: https://www.linkedin.com/in/vvishwakarma
+  ~ Official Email ID : vinod@runtime-solutions.com
+  ~ Email ID: vish.vino@gmail.com
+  ~ Last Modified : 5/1/21 12:50 PM
+  -->
+
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">api-buildup.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">api-sma.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">api-ffs.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">sso.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">ilab-sso.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">ilab-ffs-api.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">ilab-sma-api.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">ilab-training-api.mahapocra.gov.in</domain>
+        <domain includeSubdomains="true">docs.google.com</domain>
+        <domain includeSubdomains="true">www.linkedin.com</domain>
+    </domain-config>
+</network-security-config>

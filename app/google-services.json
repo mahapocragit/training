@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "189065337046",
+    "firebase_url": "https://pocra-training-7e996.firebaseio.com",
+    "project_id": "pocra-training-7e996",
+    "storage_bucket": "pocra-training-7e996.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189065337046:android:3b85ac65e426b391659177",
+        "android_client_info": {
+          "package_name": "in.gov.pocra.training"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189065337046-dutssr79m3s3lk19c1qokk45pfjc2cf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2bVLyLJQpIvncHKGfsq2VQ1KeoTBWH50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189065337046-dutssr79m3s3lk19c1qokk45pfjc2cf0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

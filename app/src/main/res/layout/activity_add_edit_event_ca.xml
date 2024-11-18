@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ca.add_edit_event_ca.AddEditEventCaActivity">
+
+    <ScrollView
+        android:id="@+id/profScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/eventTypeLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/eventTypeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ps_add_sch_event_type"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+
+                <ImageView
+                    android:id="@+id/eventTypeImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/eventSubTypeLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/eventSubTypeTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding10"
+                    android:paddingBottom="@dimen/padding10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ps_add_sch_event_sub"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+
+                <ImageView
+                    android:id="@+id/subTypeImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/eventTitleLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/eventTitleEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ps_add_sch_title"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:digits="@string/input_digit2"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/eventStartDateLLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/parti_list_border_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/eventStartDateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/ps_add_sch_start_date"
+                        android:padding="2dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_15" />
+
+                    <ImageView
+                        android:id="@+id/startDateImageView"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_calendar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eventEndDateLLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/parti_list_border_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/eventEndDateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/ps_add_sch_end_date"
+                        android:padding="2dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_15" />
+
+                    <ImageView
+                        android:id="@+id/dateImageView"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_calendar" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/eventSTimeRLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/parti_list_border_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/eventSTimeTView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="Start Time"
+                        android:padding="2dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_15" />
+
+                    <ImageView
+                        android:id="@+id/eventSTimeIView"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_clock" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eventETimeRLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/parti_list_border_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/eventETimeTView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="End TIme"
+                        android:padding="2dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_15" />
+
+                    <ImageView
+                        android:id="@+id/eventETimeIView"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_clock" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+           <!-- <LinearLayout
+                android:id="@+id/eventSTimeLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/eventSTimeTView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Select Start Time "
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+
+                <ImageView
+                    android:id="@+id/eventSTimeIView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_time"
+                    android:tint="@color/secondaryText" />
+
+            </LinearLayout>-->
+
+
+            <!--For Report date and time-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/eventRDateRLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/parti_list_border_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/eventRDateTView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="Reporting Day"
+                        android:padding="2dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_15" />
+
+                    <ImageView
+                        android:id="@+id/eventRDayIView"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_calendar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eventRTimeRLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/parti_list_border_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/eventRTimeTView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="Reporting Time"
+                        android:padding="2dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_15" />
+
+                    <ImageView
+                        android:id="@+id/eventRTimeIView"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_clock" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/selectPGroupLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--<TextView
+                    android:id="@+id/sledGpTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ps_add_sch_select_gp"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />-->
+
+                <TextView
+                    android:id="@+id/selPGroupTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Select Participants"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:id="@+id/selPGroupImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+
+            <!-- For VCRMC member-->
+            <RelativeLayout
+                android:id="@+id/selectVCRMCRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledVCRMCTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="@string/ps_add_sch_select_gp"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledVCRMCCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledVCRMCTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledVCRMCMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/sledVCRMCTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ps_add_sch_select_gp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+            <LinearLayout
+                android:id="@+id/sledGPLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledGPRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!-- For Farmer member-->
+            <RelativeLayout
+                android:id="@+id/selectFarmerRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledFarmerTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="@string/ps_add_sch_select_farmer"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledFarmerCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledFarmerTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledFarmerMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sledFarmerTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ps_add_sch_select_farmer"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+
+            <LinearLayout
+                android:id="@+id/sledFarmerLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledFarmerRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+        <!--.................................................-->
+
+            <RelativeLayout
+                android:id="@+id/selectshgRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledshgTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="SHG Group List"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledshgCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledshgTitleTView"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledshgMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sledShgTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ps_add_sch_select_farmer"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+
+            <LinearLayout
+                android:id="@+id/sledshgLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledshgRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/selectfpcRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledfpcTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="FPC List"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledfpcCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledfpcTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledfpcMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sledFpcTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ps_add_sch_select_farmer"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+
+            <LinearLayout
+                android:id="@+id/sledFpcLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledFpcRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/selectFGRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledFGTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="Farmer Group List"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledFGCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledFGTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledFGMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sledFGTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ps_add_sch_select_farmer"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+
+            <LinearLayout
+                android:id="@+id/sledFGLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledFGRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+            <!-- For PoCRA official member-->
+            <RelativeLayout
+                android:id="@+id/selectPOMRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledPOMTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="@string/ps_add_sch_select_facilitator"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledPOMCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledPOMTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledPOMMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sledPOMemberTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ps_add_sch_select_facilitator"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+
+            <LinearLayout
+                android:id="@+id/sledPOMemberLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledPOMemberRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+            <!-- For CA Resource Person-->
+            <RelativeLayout
+                android:id="@+id/selectCaResourceRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/selectCaResourceTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="@string/ca_resource_person"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/selectCaResourceCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/selectCaResourceTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/selectCaResourceMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+
+            <!-- For Other member-->
+            <RelativeLayout
+                android:id="@+id/selectOtherRLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height35"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sledOtherTitleTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:hint="Other Participants"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledOtherCountTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@+id/sledOtherTitleTView"
+                    android:hint=" : 0"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/sledOtherMoreTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="View "
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_15" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/sledOthParticipantTView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Other Participants"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+
+            <LinearLayout
+                android:id="@+id/sledOthParticipantLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledOthParticipantRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numOfParticipantsLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/participantsEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ps_add_sch_num_of_participants"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/text_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vDistLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/vDistTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:hint="Select Venue"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+
+                <ImageView
+                    android:id="@+id/distTypeImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/villageLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/villageTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:hint="Select Village"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:id="@+id/villageImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/venueLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/venueLocationTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:hint="@string/trai_info_venue_location"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+
+                <ImageView
+                    android:id="@+id/venueTypeImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kvkLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/kvkTView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:hint="Select KVK"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:id="@+id/kvkImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_arrow" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/notetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:clickable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/link"
+                android:text="Note : Kindly Shorten your url from https://bitly.com and paste shortened url over here."
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_15" />
+
+            <LinearLayout
+                android:id="@+id/venueELLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/venueLocationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="Enter Venue Location(Allowed only 30 Characters)"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:digits="@string/input_digit"
+                    android:maxLines="4"
+                    android:padding="5dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/desigLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/desigTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Select Designation"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:id="@+id/desigImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@drawable/right_arrow"
+                    app:tint="@color/bg_green"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/coordinatorLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/coordinatorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ps_add_sch_select_coordinator"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:id="@+id/addCoordinatorImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@drawable/right_arrow"
+                    app:tint="@color/bg_green"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sledCordLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledCordRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/coCordLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parti_list_border_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/coCordTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="Co-coordinator"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_15" />
+
+                <ImageView
+                    android:id="@+id/addCoCordImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@drawable/right_arrow"
+                    app:tint="@color/bg_green"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sledCoCoordLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sledCoCoordRView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/createButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="@string/ps_add_sch_create"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_15" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

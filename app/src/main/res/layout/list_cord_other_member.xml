@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/attendRLLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/parti_list_border_bg"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="@string/attend_list_name"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+            <TextView
+                android:id="@+id/nameTView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+            <ImageView
+                android:id="@+id/editIView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:visibility="visible"
+                android:padding="8dp"
+                android:contentDescription="@string/app_name"
+                android:clickable="true"
+                android:src="@drawable/edit"
+                app:tint="@color/bg_blue"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/attend_list_mobile"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+            <TextView
+                android:id="@+id/mobileTView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+            <TextView
+                android:id="@+id/genderTView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/attend_list_designation"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+            <TextView
+                android:id="@+id/designationTView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/text_15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

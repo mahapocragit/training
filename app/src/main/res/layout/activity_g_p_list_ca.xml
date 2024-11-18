@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.gov.pocra.training.activity.ca.add_edit_event_ca.vcrmc_mem_selection.GPListCaActivity">
+
+    <LinearLayout
+        android:id="@+id/selectVCRMCLLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/VCRMCListTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_bg_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="VCRMC(GP)"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/designationTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_bg_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Designation"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_18" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gpRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+
+</LinearLayout>

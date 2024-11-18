@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.common.forgot_password.OtpVerificationActivity">
+
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/otpOneEditText"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/otp_edittext_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/otpTwoEditText"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/otp_edittext_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/otpThreeEditText"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/otp_edittext_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/otpFourEditText"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/otp_edittext_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/otpSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:text="@string/otp_verify_submit_otp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/resendOtpTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="@string/otp_verify_resend_otp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

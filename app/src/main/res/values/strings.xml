@@ -1,0 +1,220 @@
+<resources>
+    <string name="app_name">PoCRA Training</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Santosh</string>
+    <string name="nav_header_subtitle">abc@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    // App Update
+    <string name="youAreNotUpdatedTitle">Update Available</string>
+    <string name="youAreNotUpdatedMessage">A new version of Training App is available. Please update to latest version... </string>
+    <string name="update">Update Now</string>
+    <string name="letter">Letter</string>
+
+    <!--<string name="upload_pdf">Upload Pdf</string>-->
+    <string name="upload_pdf">Upload Attendance Sheet</string>
+    <string name="input_digit">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789,.*@!#$%&amp;:/?"'-+()_-</string>
+    <string name="input_digit2">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789 </string>
+
+
+    // Title
+    <string name="title_login">Trainer Login</string>
+    <string name="title_forgot_pass">Forgot Password</string>
+    <string name="title_otp_verification">OTP Verification</string>
+    <string name="title_reset_pass">Reset Password</string>
+    <string name="title_event">Event List</string>
+    <string name="title_event_days">Event Days</string>
+    <string name="title_event_summary">Event Summary</string>
+    <string name="title_event_session">Event Sessions</string>
+    <string name="title_event_detail">Event Detail</string>
+    <string name="title_vcrmc_members">VCRMC Members</string>
+    <string name="title_village_list">Village List</string>
+    <string name="title_category">Select Category</string>
+    <string name="title_add_edit_co_coordinator">Add/Edit Co-coordinator</string>
+    <string name="title_coordinator">Coordinator</string>
+    <string name="title_add_edit_coordinator">Add/Edit Coordinator</string>
+    <string name="title_field_official">Field Official</string>
+    <string name="title_field_official_mem">Field Official Member</string>
+    <string name="title_pmu_official">PMU Official</string>
+    <string name="title_pmu_official_mem">PMU Official Member</string>
+    <string name="title_add_edit_member">Add/Edit Member</string>
+    <string name="title_add_edit_other_mem">Other Member</string>
+    <string name="title_profile">My Profile</string>
+    <string name="title_about_us">About Us</string>
+    <string name="title_add_edit_event">Add/Edit Event</string>
+    <string name="title_event_calender">Event Calendar</string>
+    <string name="title_closed_event">Closed Events</string>
+    <string name="title_closed_event_days">Event Days</string>
+    <string name="title_event_his_vcrmc">VCRMC List</string>
+    <string name="title_event_his_vcrmc_detail">VCRMC Attendance</string>
+    <string name="title_reports">Reports</string>
+    <string name="title_labour">Labour</string>
+    <string name="title_resource_person">Resource Person</string>
+
+    <string name="title_participants">Participants</string>
+    <string name="title_attendance">VCRMC Attendance</string>
+    <string name="title_member_detail_update">Detail Update</string>
+    <string name="title_vcrmc_attendance">VCRMC List</string>
+
+    <string name="title_img_upload">Image Upload</string>
+
+
+    // Login
+    <string name="login_mobile">Mobile Number</string>
+    <string name="login_password">Password</string>
+    <string name="login_forgot_password"><u>Forgot Password?</u></string>
+    <string name="login_btn_login">Login</string>
+
+    // Forgot password
+    <string name="f_pass_mobile_number">Enter Registered Mobile Number</string>
+    <string name="f_pass_send_otp">Send OTP</string>
+
+    // OTP Verification
+    <string name="otp_verify_submit_otp">Submit OTP</string>
+    <string name="otp_verify_resend_otp">Resend OTP</string>
+
+
+    // Add/Edit Member
+    <string name="add_edit_f_name">First Name</string>
+    <string name="add_edit_m_name">Middle Name</string>
+    <string name="add_edit_l_name">Last Name</string>
+    <string name="add_edit_mobile_number">Mobile Number</string>
+    <string name="add_edit_gender">Gender</string>
+    <string name="add_edit_male">Male</string>
+    <string name="add_edit_female">Female</string>
+    <string name="add_edit_transgender">Transgender</string>
+    <string name="add_edit_social_category">Social Category</string>
+    <string name="add_edit_designation">Designation</string>
+    <string name="add_edit_register">Register</string>
+
+
+    // Reset password
+    <string name="reset_new_password">New Password</string>
+    <string name="reset_confirm_password">Confirm Password</string>
+    <string name="reset_submit">Submit</string>
+
+    // My Profile
+    <string name="prof_last_name">Last Name</string>
+    <string name="prof_first_name">First Name</string>
+    <string name="prof_middle_name">Middle Name</string>
+    <string name="prof_email_id">Email Id</string>
+    <string name="prof_mobile_number">Mobile Number</string>
+    <string name="prof_designation">Designation</string>
+    <string name="prof_submit">Submit</string>
+
+    <!--PS-HRD-->
+    // ps Dashboard
+    <string name="ps_add_new_event">Schedule Event</string>
+    <string name="ps_upcoming_event">Upcoming Events</string>
+    <string name="ps_reports">Reports</string>
+
+    // Ps Add Event
+    <string name="ps_add_sch_event_type">Type of Event</string>
+    <string name="ps_add_sch_event_sub">Event Sub Type</string>
+    <string name="ps_add_sch_select_dbt_activity">Select DBT Activity</string>
+    <string name="ps_add_sch_title">Title of event</string>
+    <string name="ps_add_sch_select_gp">VCRMC (GP)</string>
+    <string name="ps_add_sch_select_farmer">Beneficiary Farmers</string>
+    <string name="ps_add_sch_farmer">Farmers</string>
+    <string name="ps_add_sch_select_facilitator">PoCRA Official</string>
+    <string name="ps_add_sch_start_date">Start Date</string>
+    <string name="ps_add_sch_end_date">End Date</string>
+    <string name="ps_add_sch_num_of_participants">Number of Participants</string>
+    <string name="trai_info_venue_location">Select Venue Location</string>
+    <string name="ps_add_sch_select_res_person">Resource Person</string>
+    <string name="ps_add_sch_select_coordinator">Coordinator</string>
+    <string name="ps_add_sch_create">Create</string>
+
+    <string name="trai_info_select_sub_division">Sub-Division</string>
+    <string name="trai_info_select_taluka">Taluka</string>
+
+    <string name="trai_info_select_coordinator_1">Select Coordinator 1</string>
+    <string name="trai_info_select_coordinator_2">Select Coordinator 2</string>
+    <string name="trai_info_training_desc">Training Description</string>
+    <string name="trai_info_save">Save</string>
+
+
+    // GP Member Selection
+    <string name="gp_cancel">Cancel</string>
+    <string name="gp_select">Select</string>
+    <string name="gp_mem_confirm">Confirm</string>
+    <string name="gp_list">VCRMC(GP) List</string>
+
+
+    <!--PMU-->
+    // PMU Dashboard
+    <string name="pmu_add_new_event">Schedule Event</string>
+    <string name="pmu_all_upcoming_event">All Upcoming Events</string>
+    <string name="pmu_upcoming_event_calender">Events Calendar</string>
+    <string name="pmu_upcoming_event">Upcoming Events</string>
+    <string name="pmu_assigned_event">Assigned Events</string>
+    <string name="pmu_reports">Reports</string>
+
+
+    <!--CA-->
+    // CA Dashboard
+    <string name="ca_add_new_event">Schedule Event</string>
+    <string name="ca_all_upcoming_event">All Upcoming Events</string>
+    <string name="ca_upcoming_event_calender">Events Calendar</string>
+    <string name="ca_upcoming_event">Upcoming Events</string>
+    <string name="ca_assigned_event">Assigned Events</string>
+    <string name="ca_reports">Reports</string>
+    <string name="ca_add_person">Add Person</string>
+    <string name="ca_resource_person">Resource Person</string>
+
+
+    // PMU Add Event
+    <string name="pmu_add_sch_event_type">Select Event Type</string>
+    <string name="pmu_add_sch_title">Input Event Title</string>
+    <string name="pmu_add_sch_select_participants">Select Participants</string>
+    <string name="pmu_add_sch_selected_participants">Selected Participants</string>
+    <string name="pmu_add_sch_start_date">Select Start Date</string>
+    <string name="pmu_add_sch_end_date">Select End Date</string>
+    <string name="pmu_add_sch_num_of_participants">Number of Participants</string>
+    <string name="pmu_add_sch_select_res_person">Select Resource Person</string>
+    <string name="pmu_add_sch_selected_res_person">Selected Resource Person</string>
+    <string name="pmu_add_sch_select_coordinator">Select Coordinator</string>
+    <string name="pmu_add_sch_selected_coordinator">Selected Coordinator</string>
+
+
+    // PMU Filter Activity
+    <string name="title_pmu_participants_filter"> Participant Filter</string>
+    <string name="title_participants_filter">Participant Filter</string>
+
+    <!--<string name="title_pmu_participants">PMU Participant</string>-->
+    <string name="title_pmu_participants">Participant</string>
+    <string name="title_farmer_filter">Farmer Filter</string>
+    <string name="title_Shg">SHG, FPC &amp; Famers Group</string>
+
+    <!--Coordinator-->
+    <string name="cat_vcrmc_training">VCRMC Training</string>
+    <string name="cat_farmer_training">FARMER Training</string>
+
+
+    // Training detail
+    <string name="train_detail_attendance">Attendance</string>
+    <string name="train_detail_reminders">Reminders</string>
+
+
+    // VCRMC Attendance
+    <string name="attendance_submit">Submit</string>
+    <string name="attendance_next">Next</string>
+
+
+    // Attendance
+    <string name="attend_submit">Submit Attendance</string>
+    <string name="attend_back">Back</string>
+    <string name="attend_list_name">Name:</string>
+    <string name="attend_list_mobile">Mobile:</string>
+    <string name="attend_list_designation">Designation:</string>
+    <string name="attend_list_mem_location">Location:</string>
+
+    //report
+    <string name="activity_list_1">Event Report</string>
+    <string name="activity_list_2">Session</string>
+    <string name="activity_list_3">PDF Download</string>
+
+
+</resources>

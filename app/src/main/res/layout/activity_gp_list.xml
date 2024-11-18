@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activity.ps_hrd.add_edit_event_ps.vcrmc_mem_selection.GPListActivity">
+
+    <LinearLayout
+        android:id="@+id/selectVCRMCLLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/VCRMCListTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_bg_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="VCRMC(GP)"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/designationTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_bg_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Designation"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_18" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:id="@+id/selectVCRMCLLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/VCRMCListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/parti_list_border_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Select VCRMC(GP)"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/designationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/parti_list_border_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Select Designation"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_18" />
+
+    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gpRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+
+</LinearLayout>

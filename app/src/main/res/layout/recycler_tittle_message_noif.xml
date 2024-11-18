@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. Runtime Solutions Pvt Ltd. All right reserved.
+  ~ Web URL  http://runtime-solutions.com
+  ~ Author Name: Vinod Vishwakarma
+  ~ Linked In: https://www.linkedin.com/in/vvishwakarma
+  ~ Official Email ID : vinod@runtime-solutions.com
+  ~ Email ID: vish.vino@gmail.com
+  ~ Last Modified : 5/1/21 12:50 PM
+  -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/padding3"
+    app:cardElevation="@dimen/padding3"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="center"
+        android:layout_margin="3dp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tittleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding10"
+            android:layout_marginStart="@dimen/padding10"
+            android:layout_marginTop="@dimen/padding5"
+            android:padding="3dp"
+            android:text="Tittle : "
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/text16"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height30"
+            android:windowSoftInputMode="stateHidden">
+
+            <TextView
+                android:id="@+id/messageTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:padding="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/padding10"
+                android:layout_marginStart="@dimen/padding10"
+                 android:gravity="start|center"
+                android:text="Message : "
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text14"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/checkImageView"
+                android:layout_width="@dimen/height30"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/padding10"
+                android:layout_marginStart="@dimen/padding10"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_done_green"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/padding10" />
+
+   </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height30"
+            android:windowSoftInputMode="stateHidden">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/padding55"
+            android:layout_marginStart="@dimen/padding5"
+            android:gravity="center|end"
+            android:text="Created At : "
+            android:textColor="@color/black"
+             android:textSize="@dimen/text12"
+            />
+
+            <TextView
+                android:id="@+id/readTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:textColor="#FF42842d"
+                android:layout_marginEnd="@dimen/padding10"
+                android:layout_marginStart="@dimen/padding10"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

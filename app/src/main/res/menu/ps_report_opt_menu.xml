@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_date"
+        android:orderInCategory="100"
+        android:title="Date wise Report"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_consi"
+        android:orderInCategory="100"
+        android:title="Consolidated Report"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_detail"
+        android:orderInCategory="100"
+        android:title="Event Details"
+        app:showAsAction="never" />
+</menu>

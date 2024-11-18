@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    <color name="colorPrimary">#0041b5</color>
+    <color name="colorPrimaryDark">#002d7e</color>
+    <color name="colorAccent">#40ffea</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#9E9E9E</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#002984</color>
+    <color name="colorAccent">#757de8</color>
+
+
+    <color name="colorPrimary">#43A047</color>
+    <color name="colorPrimaryDark">#00701a</color>
+    <color name="colorAccent">#76d275</color>
+    -->
+
+    <color name="colorPrimary">#678B5E</color>
+    <color name="colorPrimaryDark">#D1E8D2</color>
+    <color name="colorAccent">#3D8241</color>
+
+    <color name="button_bg">#3D8241</color>
+    <color name="black_bg">#212121</color>
+
+    <color name="primary_light">#C5CAE9</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="text_blue">#3F51B5</color>
+    <color name="text_green">#3D8241</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#000000</color>
+
+    <color name="stroke_color_gray">#C0C0C0</color>
+    <color name="stroke_color_blue">#8289e7</color>
+
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="selected_item_color">#95c7fa</color>
+    <color name="selected_light_green_color">#381BF727</color>
+    <color name="selected_item_green_color">#072905</color>
+
+    <color name="bg_blue">#757de8</color>
+    <color name="bg_green">#3d8724</color>
+    <color name="bg_red">#ec482b</color>
+    <color name="bg_light_red">#ffbcb0</color>
+    <color name="bg_light_blue">#e8eaf6</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="link">#0F8AEC</color>
+    <color name="transparent">#00FFFFFF</color>
+
+</resources>

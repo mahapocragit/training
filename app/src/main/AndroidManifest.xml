@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.PICK" />
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.CHOOSER" />
+        </intent>
+    </queries>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!--    <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera2.full" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+    <application
+        android:name=".AppDelegate"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:exported="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme"
+        tools:targetApi="q"
+        android:usesCleartextTraffic="true">
+
+
+        <activity
+            android:name=".activity.common.notification.ReadNotificationActivity"
+            android:label="Notification Detail"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ReadNotificationActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.common.ca_list.CaListEventCountActivity" />
+
+        <service
+            android:name=".web_services.FBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.common.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.common.notification.NotificationListActivity"
+            android:label="Notification List"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.common.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- Common Activities -->
+        <activity
+            android:name=".activity.common.forgot_password.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activity.common.additionalCharge.activity.SelectoRoleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.forgot_password.OtpVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.common.forgot_password.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.profile.MyProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.common.about_us.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.coordinator_list.CoordinatorListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.SHGgrFarmerCaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.CaSHGFarmerGroupListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.FPCgrFarmerCaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.CaFPCFarmerGroupListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.FRgrFarmerCaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.CaFRFarmerGroupListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.common.coordinator_list.SearchPmuMemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.common.co_coordinator_list.CoCoordinatorListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.common.coordinator_list.AddEditCoordinatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.co_coordinator_list.AddEditCoCoordinatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.downloadOrViewPdf.ViewOrDownloadPdfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.session_detail.SessionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.session_detail.EventDateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.participantsList.ParticipantGPListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.participantsList.ParticipantsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.mem_attend_detail.MemAttendanceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.coming_closed_dist_list.ComingClosedLocationListActivity"
+            android:screenOrientation="portrait" /> <!-- PS-HRD -->
+        <activity
+            android:name=".activity.ps_hrd.dashboard.DashboardPsHrdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.AddEditEventPsHrdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.vcrmc_mem_selection.GPListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.ps_report.PsReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.farmer_selection.FarmerActivitiesListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.farmer_selection.VillageListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.vcrmc_mem_selection.GPMembersListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.ps_farmer_filter.PsFarmerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.ps_farmer_filter.PsHrdFarmerFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.ps_farmer_filter.PsHrdSHGrFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.ps_farmer_filter.PsHrdFPCFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.ps_farmer_filter.PsHrdFarmerGroupFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.add_edit_other_member.AddEditPsOtherParticipantsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.add_edit_other_member.OtherParticipantListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.proj_official_selection.PocraOfficialFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.proj_official_selection.PocraOfficialListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.cancel_event_ps.CancelEventPsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.vcrmc_mem_selection.TalukaListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.add_edit_event_ps.vcrmc_mem_selection.SubDivListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.ps_upcoming_event.PsComingEventActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.ps_upcoming_event.PsUpcomingEventDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ps_hrd.ps_report.PsClosedEventListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.ps_report.EventReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.dashboard.PsEventCaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.ps_report.PsReportSessionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ps_hrd.ps_report.PsReportListActivity"
+            android:screenOrientation="portrait" /> <!-- PMU -->
+        <activity
+            android:name=".activity.pmu.dashboard.DashboardPmuActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.pmu.dashboard.PmuEventCaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.AddEventPmuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.pmu.pmu_report.PmuReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.pmu_report.PmuPDFReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.pmu_report.PmuClosedEventListByDistIDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_mem_filter_list.pocra_office_staff.PmuParticipantFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_mem_filter_list.pocra_field_staff.PoCRAFieldStaffFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_farmer_filter.PmuFarmerFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_farmer_filter.PmuShgFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_farmer_filter.PmuFPCFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_farmer_filter.PmuFRFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_farmer_filter.PmuFarmerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_mem_filter_list.PmuParticipantListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_other_member.PmuOtherMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.pmu_other_member.PmuAddEditOtherMemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.cancel_event_pmu.CancelEventPMUActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.common.district_list.DistrictListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.pmu_upcoming_event.PmuComingEventActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.pmu_upcoming_event.PmuUpcomingEventDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.pmu.pmu_report.PmuReportSessionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.pmu_report.PmuReportListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pmu.add_event_pmu.Farmers_Activity"
+            android:screenOrientation="portrait" /> <!-- Coordinator -->
+        <activity
+            android:name=".activity.coordinator.event_report.ClosedEventListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_report.HistEventVCRMCListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_report.HistEventVCRMCDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_day_attendance.unused_event_day_group_mem_detail.EventDayGroupMemDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.add_edit_other_member.AddEditOtherMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.coordinator.event_list.CoEventListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_list.EventDaysActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_day_attendance.event_day_group_list.EventDGruListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_day_attendance.event_day_group_mem_attendance.GruMemAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_day_attendance.attend_other_member.AttendOtherMemAddEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.attend_image_upload.AttendImageUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_list.ThankYouActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.coordinator.event_report.ClosedEventDaysActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_session.SessionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.event_session.AddSessionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.coordinator.event_closer.EventSummaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.coordinator.dashboard.DashboardCoordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- CA -->
+        <activity
+            android:name=".activity.ca.dashboard.DashboardCaActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ca.ca_upcoming_event.CaComingEventActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.ca_upcoming_event.CaUpcomingEventDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.AddEditEventCaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.ca_report.CaEventReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.ca_report.CaReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.ca_report.CaClosedEventListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.dashboard.CaEventCaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.CaFarmerFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_farmer_filter.CaFarmerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_mem_filter_list.CaFieldStaffFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.ca_mem_filter_list.CaParticipantFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.vcrmc_mem_selection.GPListCaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.vcrmc_mem_selection.GPMembersListCaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.add_edit_event_ca.vcrmc_mem_selection.SubDivListCaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ca.person_list.LabourFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.person_list.AddResourcePersonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.person_list.AddAgriLabourActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.person_list.ResourcePersonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ca.person_list.LabourActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+    </application>
+
+</manifest>

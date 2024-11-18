@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. Runtime Solutions Pvt Ltd. All right reserved.
+  ~ Web URL  http://runtime-solutions.com
+  ~ Author Name: Vinod Vishwakarma
+  ~ Linked In: https://www.linkedin.com/in/vvishwakarma
+  ~ Official Email ID : vinod@runtime-solutions.com
+  ~ Email ID: vish.vino@gmail.com
+  ~ Last Modified : 5/1/21 12:50 PM
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/mainLayout"
+  >
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_green"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="@dimen/padding3"
+            android:layout_toStartOf="@+id/statusImageView"
+            android:layout_weight="1.7"
+             android:gravity="center"
+            android:padding="@dimen/padding5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text16"
+            android:textStyle="italic|bold" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/padding5"
+             android:layout_weight="0.3"
+            android:padding="15dp"
+            android:src="@drawable/next"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
